@@ -73,3 +73,10 @@ body { /* "Corpo" da Página de Forma geral */
         color: white;
         border-color: grey
     }
+
+    div#mensagem {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    /* Defini alguns nomes que serão usados posteriormente no script.js para que não haja problema de nomenclatura entre os membros do grupo na criação das funções lá*/
+    
