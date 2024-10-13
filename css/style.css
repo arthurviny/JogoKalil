@@ -1,0 +1,82 @@
+
+h1 { /* Configurações do "Nome do Jogo (que a gente vai decidir) */
+    font-size: 45px;
+    font-weight: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:black   
+    
+}           
+
+body { /* "Corpo" da Página de Forma geral */
+     background-color: rgb(34, 1, 94);  /* Cor de Fundo da Página*/
+     font-family: Arial, sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /*Posicionamento Horizontal*/
+    }
+
+.entorno { /* essa caixnha ai do meio onde a mágica acontece */
+    text-align: center; /* Onde vai ficar placeholder*/
+    background-color: rgb(194, 152, 233);
+    padding: 40px; /*Tamanho da "Caixa" */
+    border-radius: 20px; /* Arredondamento das Bordas */
+    box-shadow: 0 0 10px whitesmoke /*Brilho das Bordas*/
+    }
+
+    .caixa-letra {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #ccc;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    div#grids { /* essa # serve para identificar a div por meio de seu ID (definido pelo usuário) */
+            display: grid;
+            grid-template-columns: repeat(5, 50px); /*Define o Número total de colunas e o tamanho */
+            grid-gap: 10px;
+            justify-content: center; 
+            margin-bottom:25px;
+    }
+
+    input { /* Altera a Caixa de digitação de respostas */
+        padding: 10px; /* Mexe no tamanho da caixa */
+        font-size: 18px; /*Tamanho da Letra Dentro da Caixinha */
+        margin: 10px 0;
+        width: 50%; /* Comprimeto da caixa */
+    }
+
+    button { /* Alterações no Botão de Envio das repostas*/
+        padding: 10px 20px;
+        font-size: 18px;
+
+    }
+
+    .correta { /* A Letra está posicionada Corretamente */
+        background-color: lightgreen;
+        color: white;
+        border-color: green;
+    }
+
+    .quase { /* A letra está na palavra, porém no posicionamento errado */
+        background-color: red;
+        color: white;
+        border-color: rgb(128, 4, 0);
+    }
+    .errada { /* Como irão aparecer as letras que não estão em nenhum lugar da palavra em questão */
+        background-color: gray;
+        color: white;
+        border-color: grey
+    }
+
+    div#mensagem {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    /* Defini alguns nomes que serão usados posteriormente no script.js para que não haja problema de nomenclatura entre os membros do grupo na criação das funções lá*/
+    
