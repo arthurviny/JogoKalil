@@ -36,7 +36,7 @@ body { /* "Corpo" da Página de Forma geral */
         text-transform: uppercase;
     }
     
-    div#grids { /* essa # serve para identificar a div por meio de seu ID (definido pelo usuário) */
+    div#tabuleiro { /* essa # serve para identificar a div por meio de seu ID (definido pelo usuário) */
             display: grid;
             grid-template-columns: repeat(5, 50px); /*Define o Número total de colunas e o tamanho */
             grid-gap: 10px;
