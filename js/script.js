@@ -18,7 +18,7 @@ tais classes em cada uma das letras */
 
 // função verificarpalavra que vai ver a palavra digitada pelo jogador e comparar com a palavra secreta
 
-// função pra reiniciar o jogo (ficar jogado ai até cansar  )
+// função pra reiniciar o jogo (ficar jogado ai até cansar)
 
 
 

@@ -44,7 +44,7 @@ body { /* "Corpo" da Página de Forma geral */
             margin-bottom:25px;
     }
 
-    input { /* Altera a Caixa de digitação de respostas */
+    input { /* Altera a Caixa de digitação de respostas */  
         padding: 10px; /* Mexe no tamanho da caixa */
         font-size: 18px; /*Tamanho da Letra Dentro da Caixinha */
         margin: 10px 0;
