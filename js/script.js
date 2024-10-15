@@ -8,7 +8,7 @@ const listadepalavras = ["MAGIA", "CARRO", "CASAS", "LIVRO", "FELIZ", "TEMPO", "
 
 const palavraaleatoria = (palavra) => palavra[Math.floor(Math.random()* palavra.length)] // Função que escolhe uma palavra aleatória por meio do índice dela
 
-// Criar Uma Função Para que os quadradinhos apareçam na tela após a pessoa digitar a palavra
+//Criar Uma Função Para que os quadradinhos apareçam na tela após a pessoa digitar a palavra
 
 /*Função para verificar as letras, dizendo se a letra em questão está certa (letra certa no lugar certo),
 quase certa (letra está contida na palavra, porém posicionada no lugar errado ou não está nem na palavra*/
@@ -18,7 +18,7 @@ tais classes em cada uma das letras */
 
 // função verificarpalavra que vai ver a palavra digitada pelo jogador e comparar com a palavra secreta
 
-// função pra reiniciar o jogo (ficar jogado ai até cansar)
+// função pra reiniciar o jogo (Unlimited mode)
 
 
 
