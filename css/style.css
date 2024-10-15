@@ -2,8 +2,8 @@
 h1 { /* Configurações do "Nome do Jogo (que a gente vai decidir) */
     font-size: 45px;
     font-weight: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:black   
+    font-family: 'Times New Roman', Times, serif;
+    color:black
     
 }           
 
@@ -16,15 +16,15 @@ body { /* "Corpo" da Página de Forma geral */
     height: 70vh; /*Posicionamento Horizontal*/
     }
 
-.entorno { /* essa caixnha ai do meio onde a mágica acontece */
+.container { /* essa caixnha ai do meio onde a mágica acontece */
     text-align: center; /* Onde vai ficar placeholder*/
     background-color: rgb(194, 152, 233);
-    padding: 40px; /*Tamanho da "Caixa" */
+    padding: 45px; /*Tamanho da "Caixa" */
     border-radius: 20px; /* Arredondamento das Bordas */
     box-shadow: 0 0 10px whitesmoke /*Brilho das Bordas*/
     }
 
-    .caixa-letra {
+.caixa-letra {
         width: 50px;
         height: 50px;
         display: flex;
