@@ -1,13 +1,22 @@
-const listadepalavras = ["MAGIA", "CARRO", "CASAS", "LIVRO", "FELIZ", "TEMPO", "FORTE", "PAZES", "VIRUS", "PLANO", 
-"JOGOS", "FALSO", "TRONO", "BRAVO", "DENTE", "CALOR", "SORVE", "NEVES", "FRUTA", "CINCO", 
-"MOEDA", "RISOS", "SONHO", "PRAZO", "VENTO", "CACHO", "TREZE", "FOCAR", "VIDRO", "METRO", 
-"LAZER", "PALMA", "AMIGO", "FAZER", "NORTE", "LARGO", "GARFO", "CORPO", "NOBRE", "DANCA", 
-"RITMO", "BOTAO", "LOUSA", "CHUVA", "TERRA", "NUVEM", "TREVO", "ACENO", "RESTA", "SALTO", 
-"LINHA", "PERDA", "CANTO", "MUNDO", "BOLSA", "GOSTO", "VELHO", "LIMAO", "FACIL", "FRIOS",
-]
+const listadepalavras = ["SINTO", "SUITE", "AVIDO", "FESTA", "BEBIA", "HONRA", "OUVIR", "PESCO", "FUNGO", "PAGAM",
+    "GINGA", "PINTA", "PODER", "UTERO", "PILHA", "SARAR", "FRUTA", "PIANO", "NOTAR", "MUSGO",
+    "TENSA", "MELAO", "FELIZ", "MIOJO", "PAGOS", "PUROS", "TEXTO", "MAMAE", "FUSCA", "AMENO",
+    "DUTOS", "CHUVA", "MIMOS", "SINOS", "CORAL", "MULTI", "FORTE", "TONTA", "CRETA", "TEMOR", 
+    "NEURO", "ENTES", "CABAL", "LIGAR", "ROLAR", "NAVIO", "VOSSA", "LIMBO", "CALVO", "ONCAS", 
+    "FEDOR", "BALDE", "AQUEM", "OXALA", "PATOS", "TALCO", "LABIA", "CRIME", "GRADE", "CARTA"
+   ]
 
-const palavraaleatoria = (palavra) => palavra[Math.floor(Math.random()* palavra.length)] // Função que escolhe uma palavra aleatória por meio do índice dela
+const palavraAleatoria = () => listadepalavras[Math.floor(Math.random()* listadepalavras.length)] // Função que escolhe uma palavra aleatória por meio do índice dela
 
+const palavraSelecionada = palavraAleatoria() // Função que guarda durante o jogo o valor escolhido pela função palavraAleatoria
+
+function verificarpalavra () { //Função que verifica se a palavra atende ao requisito de possuir exatamente 5 letras e verifica se é igual a palavra selecionada ou se é diferente dela
+    const input = document.getElementById('entrada-palavra').value
+
+    if(input.length !== 5) {alert("A palavra deve ter exatamente 5 letras!")}
+        else if(input.toUpperCase() === palavraSelecionada) {alert("Parabéns, você acertou!")}
+            else {alert("Errou, tente novamente!")}
+}
 //Criar Uma Função Para que os quadradinhos apareçam na tela após a pessoa digitar a palavra
 
 /*Função para verificar as letras, dizendo se a letra em questão está certa (letra certa no lugar certo),
