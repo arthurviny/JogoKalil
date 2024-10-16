@@ -12,10 +12,17 @@
     <div class="container">
         <h1>Verbetim</h1> <!--"Título" do Jogo-->
         <div id="tabuleiro"></div> 
-        <input type="text" id="entrada-palavra" maxlength="5" placeholder="Digite uma palavra" />
-        <button onclick="verificarpalavra()">ENTER</button> <!--Cria o Botão de Enviar Resposta / A função verificarpalavra vai ter que ser adiciona no script.js-->
-        <p id="mensagem"></p>                        
-        </div>
+        
+        <input type="text" id="inputPalpite" maxlength="5" placeholder="Digite uma palavra" />
+        
+        <button id= "enviarPalpite" onclick="verificarpalavra()">ENTER</button> <!--Cria o Botão de Enviar Resposta / A função verificarpalavra vai ter que ser adiciona no script.js-->
+
+        <!-- Div para exibir o resultado dos palpites -->
+    <div id="resultadoPalpite"></div>
+       
+        <!-- Botão para reiniciar o jogo, que será inicialmente oculto -->
+        <button id="botaoReiniciar" style="display: none;">Reiniciar Jogo</button>
+         </div>
 </body>
 </html> 
 

@@ -6,29 +6,36 @@ const listadepalavras = ["SINTO", "SUITE", "AVIDO", "FESTA", "BEBIA", "HONRA", "
     "FEDOR", "BALDE", "AQUEM", "OXALA", "PATOS", "TALCO", "LABIA", "CRIME", "GRADE", "CARTA"
    ]
 
-const palavraAleatoria = () => listadepalavras[Math.floor(Math.random()* listadepalavras.length)] // Função que escolhe uma palavra aleatória por meio do índice dela
-
-const palavraSelecionada = palavraAleatoria() // Função que guarda durante o jogo o valor escolhido pela função palavraAleatoria
-   
-//Criar Uma Função Para que os quadradinhos apareçam na tela após a pessoa digitar a palavra
+const palavraAleatoria = () => {
+ const indice = [Math.floor(Math.random()* listadepalavras.length)] // Função que escolhe uma palavra aleatória por meio do índice dela
+ return listadepalavras[indice]
+}
+const palavraSelecionada = palavraAleatoria() // Função que guarda durante o jogo o valor escolhido pela função palavraAleatoria 
+let tentativasRestantes = 6;  // Número máximo de tentativas  (Usei Let pois não tem como alterar o valor de uma constante pelo meu conhecimeto vai ser necessário )
 
 /*Função para verificar as letras, dizendo se a letra em questão está certa (letra certa no lugar certo),
 quase certa (letra está contida na palavra, porém posicionada no lugar errado ou não está nem na palavra*/
-
 /* Dado o valor em correta, quase e errada (nomes que eu defini no css), criar uma função para aplicar 
-tais classes em cada uma das letras */
+tais classes em cada uma das letras, lembrando das nuances de palavras que possuem letras repetidas e coisas desse tipo */
 
 
-function verificarpalavra () { //Função que verifica se a palavra atende ao requisito de possuir exatamente 5 letras e verifica se é igual a palavra selecionada ou se é diferente dela
-    const input = document.getElementById('entrada-palavra').value
+//Função Para que as respostas anteriores continuem na tela, para o jogador poder se basear
+
+// Função para reiniciar o jogo
+const reiniciarJogo = () => {
+    tentativasRestantes = 6;
+    palavraSecreta = palavraAleatoria();  // Escolhe uma nova palavra secreta
+    document.getElementById("resultadoPalpite").innerHTML = ''; // Limpa os palpites anteriores
+    document.getElementById("botaoReiniciar").style.display = 'none'; // Oculta o botão de reiniciar
+    document.getElementById("enviarPalpite").style.display = 'inline'; // Reexibe o botão de enviar palpite
+    document.getElementById("inputPalpite").style.display = 'inline'; // Reexibe o campo de input
+    alert("O jogo foi reiniciado! Tente novamente.");
+  };
+
+  function verificarpalavra () { //Função que verifica se a palavra atende ao requisito de possuir exatamente 5 letras e verifica se é igual a palavra selecionada ou se é diferente dela
+    const input = document.getElementById('inputPalpite').value
 
     if(input.length !== 5) {alert("A palavra deve ter exatamente 5 letras!")}
         else if(input.toUpperCase() === palavraSelecionada) {alert("Parabéns, você acertou!")}
             else {alert("Errou, tente novamente!")}
 }
-
-// função pra reiniciar o jogo (Unlimited mode)
-
-
-
- 

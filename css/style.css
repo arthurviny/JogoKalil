@@ -8,7 +8,7 @@ h1 { /* Configurações do "Nome do Jogo (que a gente vai decidir) */
 }           
 
 body { /* "Corpo" da Página de Forma geral */
-     background-color: rgb(34, 1, 94);  /* Cor de Fundo da Página*/
+     background-color: rgb(21, 6, 48);  /* Cor de Fundo da Página*/
      font-family: Arial, sans-serif; 
     display: flex;
     justify-content: center;
@@ -18,23 +18,12 @@ body { /* "Corpo" da Página de Forma geral */
 
 .container { /* essa caixnha ai do meio onde a mágica acontece */
     text-align: center; /* Onde vai ficar placeholder*/
-    background-color: rgb(194, 152, 233);
+    background-color: rgb(170, 152, 233);
     padding: 45px; /*Tamanho da "Caixa" */
     border-radius: 20px; /* Arredondamento das Bordas */
     box-shadow: 0 0 10px whitesmoke /*Brilho das Bordas*/
     }
 
-.caixa-letra {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #ccc;
-        font-size: 24px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
     
     div#tabuleiro { /* essa # serve para identificar a div por meio de seu ID (definido pelo usuário) */
             display: grid;
@@ -58,25 +47,39 @@ body { /* "Corpo" da Página de Forma geral */
     }
 
     .correta { /* A Letra está posicionada Corretamente */
-        background-color: lightgreen;
+        background-color:  green;
         color: white;
-        border-color: green;
+        
     }
 
     .quase { /* A letra está na palavra, porém no posicionamento errado */
-        background-color: red;
-        color: white;
-        border-color: rgb(128, 4, 0);
+        background-color: rgb(180, 132, 42);
+        color:white;
+
+       
     }
     .errada { /* Como irão aparecer as letras que não estão em nenhum lugar da palavra em questão */
         background-color: gray;
         color: white;
-        border-color: grey
+        
     }
 
-    div#mensagem {
-        margin-top: 20px;
-        font-size: 18px;
-    }
-    /* Defini alguns nomes que serão usados posteriormente no script.js para que não haja problema de nomenclatura entre os membros do grupo na criação das funções lá*/
-    
+    /* Estilo para o botão de reiniciar */
+#botaoReiniciar {
+    display: none; /* Inicialmente escondido */
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #botaoReiniciar:hover {
+    background-color: #d32f2f;
+  }
+  
+
+   
