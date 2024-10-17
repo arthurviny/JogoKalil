@@ -32,7 +32,7 @@ const reiniciarJogo = () => {
     alert("O jogo foi reiniciado! Tente novamente.");
   };
 
-  function verificarpalavra () { //Função que verifica se a palavra atende ao requisito de possuir exatamente 5 letras e verifica se é igual a palavra selecionada ou se é diferente dela
+const verificarpalavra = function verificar() { //Função que verifica se a palavra atende ao requisito de possuir exatamente 5 letras e verifica se é igual a palavra selecionada ou se é diferente dela
     const input = document.getElementById('inputPalpite').value
 
     if(input.length !== 5) {alert("A palavra deve ter exatamente 5 letras!")}
