@@ -6,12 +6,14 @@ const listadepalavras = ["SINTO", "SUITE", "AVIDO", "FESTA", "BEBIA", "HONRA", "
     "FEDOR", "BALDE", "AQUEM", "OXALA", "PATOS", "TALCO", "LABIA", "CRIME", "GRADE", "CARTA"
    ]
 
-const palavraAleatoria = () => {
- const indice = [Math.floor(Math.random()* listadepalavras.length)] // Função que escolhe uma palavra aleatória por meio do índice dela
- return listadepalavras[indice]
-}
-const palavraSelecionada = palavraAleatoria() // Função que guarda durante o jogo o valor escolhido pela função palavraAleatoria 
-let tentativasRestantes = 6;  // Número máximo de tentativas  (Usei Let pois não tem como alterar o valor de uma constante pelo meu conhecimeto vai ser necessário )
+// Função para escolher uma palavra aleatória a partir de uma lista fornecida (Com parâmetro)
+const palavraAleatoria = (lista) => {
+    const indice = Math.floor(Math.random() * lista.length);
+    return lista[indice]
+  };
+
+const palavraSelecionada = palavraAleatoria(listadepalavras) // Função que guarda durante o jogo o valor escolhido pela função palavraAleatoria 
+let tentativasRestantes = 6;  // Número máximo de tentativas  (Usei Let pois não tem como alterar o valor de uma constante pelo meu conhecimeto vai ser necessário / Depois eu tento fazer uma função recursiva pra substituir isso aqui)
 
 /*Função para verificar as letras, dizendo se a letra em questão está certa (letra certa no lugar certo),
 quase certa (letra está contida na palavra, porém posicionada no lugar errado ou não está nem na palavra*/
@@ -24,7 +26,7 @@ tais classes em cada uma das letras, lembrando das nuances de palavras que possu
 // Função para reiniciar o jogo
 const reiniciarJogo = () => {
     tentativasRestantes = 6;
-    palavraSecreta = palavraAleatoria();  // Escolhe uma nova palavra secreta
+    palavraSelecionada = palavraAleatoria(listadepalavras);  // Escolhe uma nova palavra secreta
     document.getElementById("resultadoPalpite").innerHTML = ''; // Limpa os palpites anteriores
     document.getElementById("botaoReiniciar").style.display = 'none'; // Oculta o botão de reiniciar
     document.getElementById("enviarPalpite").style.display = 'inline'; // Reexibe o botão de enviar palpite
@@ -36,6 +38,14 @@ const verificarpalavra = function verificar() { //Função que verifica se a pal
     const input = document.getElementById('inputPalpite').value
 
     if(input.length !== 5) {alert("A palavra deve ter exatamente 5 letras!")}
-        else if(input.toUpperCase() === palavraSelecionada) {alert("Parabéns, você acertou!")}
+        else if(input.toUpperCase() === palavraSelecionada) {alert("Parabéns, você acertou!");  mostrarBotaoReiniciar()}
             else {alert("Errou, tente novamente!")}
+            //Precisamos Alterar essa função para: Limitar as tentativas em 6, e , ao usuário realizar todas e errar a palavra, o jogo encerrar e aparecer tambem o botão de reiniciar 
 }
+
+const mostrarBotaoReiniciar = () => {
+    document.getElementById("botaoReiniciar").style.display = 'inline'; // Exibe o botão de reiniciar
+    document.getElementById("enviarPalpite").style.display = 'none';  // Oculta o botão de enviar palpite
+    document.getElementById("inputPalpite").style.display = 'none';   // Oculta o campo de input
+}    
+ 

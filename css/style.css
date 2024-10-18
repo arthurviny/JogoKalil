@@ -1,5 +1,5 @@
 
-h1 { /* Configurações do "Nome do Jogo (que a gente vai decidir) */
+    h1 { /* Configurações do "Nome do Jogo (que a gente vai decidir) */
     font-size: 45px;
     font-weight: 10px;
     font-family: 'Times New Roman', Times, serif;
@@ -7,7 +7,7 @@ h1 { /* Configurações do "Nome do Jogo (que a gente vai decidir) */
     
 }           
 
-body { /* "Corpo" da Página de Forma geral */
+    body { /* "Corpo" da Página de Forma geral */
      background-color: rgb(21, 6, 48);  /* Cor de Fundo da Página*/
      font-family: Arial, sans-serif; 
     display: flex;
@@ -16,10 +16,10 @@ body { /* "Corpo" da Página de Forma geral */
     height: 70vh; /*Posicionamento Horizontal*/
     }
 
-.container { /* essa caixnha ai do meio onde a mágica acontece */
+    .container { /* essa caixnha ai do meio onde a mágica acontece */
     text-align: center; /* Onde vai ficar placeholder*/
     background-color: rgb(170, 152, 233);
-    padding: 45px; /*Tamanho da "Caixa" */
+    padding: 80px; /*Tamanho da "Caixa" */
     border-radius: 20px; /* Arredondamento das Bordas */
     box-shadow: 0 0 10px whitesmoke /*Brilho das Bordas*/
     }
@@ -53,19 +53,19 @@ body { /* "Corpo" da Página de Forma geral */
     }
 
     .quase { /* A letra está na palavra, porém no posicionamento errado */
-        background-color: rgb(180, 132, 42);
+        background-color: rgb(199, 130, 2);
         color:white;
 
        
     }
     .errada { /* Como irão aparecer as letras que não estão em nenhum lugar da palavra em questão */
-        background-color: gray;
+        background-color: red;
         color: white;
         
     }
 
     /* Estilo para o botão de reiniciar */
-#botaoReiniciar {
+    #botaoReiniciar {
     display: none; /* Inicialmente escondido */
     font-size: 18px;
     padding: 10px 20px;
