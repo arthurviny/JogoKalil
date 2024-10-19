@@ -1,9 +1,9 @@
 const listadepalavras = ["SINTO", "SUITE", "AVIDO", "FESTA", "BEBIA", "HONRA", "OUVIR", "PESCO", "FUNGO", "PAGAM",
     "GINGA", "PINTA", "PODER", "UTERO", "PILHA", "SARAR", "FRUTA", "PIANO", "NOTAR", "MUSGO",
     "TENSA", "MELAO", "FELIZ", "MIOJO", "PAGOS", "PUROS", "TEXTO", "MAMAE", "FUSCA", "AMENO",
-    "DUTOS", "CHUVA", "MIMOS", "SINOS", "CORAL", "MULTI", "FORTE", "TONTA", "CRETA", "TEMOR", 
-    "NEURO", "ENTES", "CABAL", "LIGAR", "ROLAR", "NAVIO", "VOSSA", "LIMBO", "CALVO", "ONCAS", 
-    "FEDOR", "BALDE", "AQUEM", "OXALA", "PATOS", "TALCO", "LABIA", "CRIME", "GRADE", "CARTA"  
+    "DUTOS", "CHUVA", "MIMOS", "SINOS", "CORAL", "MULTI", "FORTE", "TONTA", "CRETA", "TEMOR",
+    "NEURO", "ENTES", "CABAL", "LIGAR", "ROLAR", "NAVIO", "VOSSA", "LIMBO", "CALVO", "ONCAS",
+    "FEDOR", "BALDE", "AQUEM", "OXALA", "PATOS", "TALCO", "LABIA", "CRIME", "GRADE", "CARTA" 
    ]
 
 // Função para escolher uma palavra aleatória a partir de uma lista fornecida (Com parâmetro)
@@ -42,8 +42,8 @@ const verificarpalavra = function verificar() { //Função que verifica se a pal
             else {alert("Errou, tente novamente!")}
             //Precisamos Alterar essa função para: Limitar as tentativas em 6, e , ao usuário realizar todas e errar a palavra, o jogo encerrar e aparecer tambem o botão de reiniciar 
 }
-// Função para reiniciar a página
-const reiniciarPagina = () => {
+// Função para recarregar a página
+const recarregarPagina = () => {
   location.reload();  
 };
 
@@ -51,6 +51,7 @@ const mostrarBotaoReiniciar = () => {
     document.getElementById("botaoReiniciar").style.display = 'inline'; // Exibe o botão de reiniciar
     document.getElementById("enviarPalpite").style.display = 'none';  // Oculta o botão de enviar palpite
     document.getElementById("inputPalpite").style.display = 'none';   // Oculta o campo de input
+    document.getElementById("ensinar").style.display = 'none'; // Some com o botão de Tutorial 
     const botaoReiniciar = document.getElementById("botaoReiniciar");
-    botaoReiniciar.addEventListener('click', reiniciarPagina);  // Associa a função de recarregar página ao clique
+    botaoReiniciar.addEventListener('click', recarregarPagina);  
 }    
