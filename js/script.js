@@ -8,7 +8,7 @@ const listadepalavras = ["SINTO", "SUITE", "AVIDO", "FESTA", "BEBIA", "HONRA", "
 
 // Função para escolher uma palavra aleatória a partir de uma lista fornecida (Com parâmetro)
 const palavraAleatoria = (lista) => {
-    const indice = Math.floor(Math.random() * lista.length);
+    const indice = Math.floor(Math.random() * lista.length)
     return lista[indice]
   };
 
@@ -25,8 +25,8 @@ tais classes em cada uma das letras, lembrando das nuances de palavras que possu
 
 // Função para reiniciar o jogo
 const reiniciarJogo = () => {
-    tentativasRestantes = 6;
-    palavraSelecionada; // Escolhe uma nova palavra secreta
+    tentativasRestantes = 6
+    palavraSelecionada // Escolhe uma nova palavra secreta
     document.getElementById("resultadoPalpite").innerHTML = ''; // Limpa os palpites anteriores
     document.getElementById("botaoReiniciar").style.display = 'none'; // Oculta o botão de reiniciar
     document.getElementById("enviarPalpite").style.display = 'inline'; // Reexibe o botão de enviar palpite
@@ -45,7 +45,7 @@ const verificarpalavra = function verificar() { //Função que verifica se a pal
 // Função para recarregar a página
 const recarregarPagina = () => {
   location.reload();  
-};
+}
 
 const mostrarBotaoReiniciar = () => {
     document.getElementById("botaoReiniciar").style.display = 'inline'; // Exibe o botão de reiniciar
@@ -53,5 +53,5 @@ const mostrarBotaoReiniciar = () => {
     document.getElementById("inputPalpite").style.display = 'none';   // Oculta o campo de input
     document.getElementById("ensinar").style.display = 'none'; // Some com o botão de Tutorial 
     const botaoReiniciar = document.getElementById("botaoReiniciar");
-    botaoReiniciar.addEventListener('click', recarregarPagina);  
+    botaoReiniciar.addEventListener('click', recarregarPagina)  
 }    

@@ -54,7 +54,7 @@
     }
 
     .quase { /* A letra está na palavra, porém no posicionamento errado */
-        background-color: rgb(199, 130, 2);
+        background-color:yellow;
         color:white;
 
        
