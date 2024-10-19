@@ -3,7 +3,7 @@ const listadepalavras = ["SINTO", "SUITE", "AVIDO", "FESTA", "BEBIA", "HONRA", "
     "TENSA", "MELAO", "FELIZ", "MIOJO", "PAGOS", "PUROS", "TEXTO", "MAMAE", "FUSCA", "AMENO",
     "DUTOS", "CHUVA", "MIMOS", "SINOS", "CORAL", "MULTI", "FORTE", "TONTA", "CRETA", "TEMOR", 
     "NEURO", "ENTES", "CABAL", "LIGAR", "ROLAR", "NAVIO", "VOSSA", "LIMBO", "CALVO", "ONCAS", 
-    "FEDOR", "BALDE", "AQUEM", "OXALA", "PATOS", "TALCO", "LABIA", "CRIME", "GRADE", "CARTA"
+    "FEDOR", "BALDE", "AQUEM", "OXALA", "PATOS", "TALCO", "LABIA", "CRIME", "GRADE", "CARTA"  
    ]
 
 // Função para escolher uma palavra aleatória a partir de uma lista fornecida (Com parâmetro)
@@ -26,7 +26,7 @@ tais classes em cada uma das letras, lembrando das nuances de palavras que possu
 // Função para reiniciar o jogo
 const reiniciarJogo = () => {
     tentativasRestantes = 6;
-    palavraSelecionada = palavraAleatoria(listadepalavras);  // Escolhe uma nova palavra secreta
+    palavraSelecionada; // Escolhe uma nova palavra secreta
     document.getElementById("resultadoPalpite").innerHTML = ''; // Limpa os palpites anteriores
     document.getElementById("botaoReiniciar").style.display = 'none'; // Oculta o botão de reiniciar
     document.getElementById("enviarPalpite").style.display = 'inline'; // Reexibe o botão de enviar palpite
@@ -42,10 +42,15 @@ const verificarpalavra = function verificar() { //Função que verifica se a pal
             else {alert("Errou, tente novamente!")}
             //Precisamos Alterar essa função para: Limitar as tentativas em 6, e , ao usuário realizar todas e errar a palavra, o jogo encerrar e aparecer tambem o botão de reiniciar 
 }
+// Função para reiniciar a página
+const reiniciarPagina = () => {
+  location.reload();  
+};
 
 const mostrarBotaoReiniciar = () => {
     document.getElementById("botaoReiniciar").style.display = 'inline'; // Exibe o botão de reiniciar
     document.getElementById("enviarPalpite").style.display = 'none';  // Oculta o botão de enviar palpite
     document.getElementById("inputPalpite").style.display = 'none';   // Oculta o campo de input
+    const botaoReiniciar = document.getElementById("botaoReiniciar");
+    botaoReiniciar.addEventListener('click', reiniciarPagina);  // Associa a função de recarregar página ao clique
 }    
- 

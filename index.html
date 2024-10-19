@@ -14,14 +14,13 @@
         <div id="tabuleiro"></div> 
         
         <input type="text" id="inputPalpite" maxlength="5" placeholder="Digite uma palavra" />
-        
-        <button id= "enviarPalpite" onclick="verificarpalavra()">ENVIAR</button> <!--Cria o Botão de Enviar Resposta / A função verificarpalavra vai ter que ser adiciona no script.js-->
+        <button id= "enviarPalpite" onclick="verificarpalavra()">ENVIAR</button> <!--Cria o Botão de Enviar Resposta 
 
         <!-- Div para exibir o resultado dos palpites -->
         <div id="resultadoPalpite"></div>
        
         <!-- Botão para reiniciar o jogo, que será inicialmente oculto -->
-        <button id="botaoReiniciar" style="display: none;">Reiniciar Jogo</button>
+        <button id="botaoReiniciar" onclick ="reiniciarJogo()" style="display: none;">Reiniciar Jogo</button>
          </div>
 </body>
 </html> 
