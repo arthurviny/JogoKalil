@@ -26,7 +26,7 @@ const verificarpalavra = () => {
     }
 
     // Verifica a palavra e exibe o resultado no histórico
-    const resultado = verificarPalavra(palavraSelecionada, inputPalpite);
+    const resultado = compararLetra(palavraSelecionada, inputPalpite);
     mostrarResultado(resultado, inputPalpite);
 
     tentativasRestantes--;
@@ -43,7 +43,7 @@ const verificarpalavra = () => {
 /*Função para verificar as letras, dizendo se a letra em questão está certa (letra certa no lugar certo),
 quase certa (letra está contida na palavra, porém posicionada no lugar errado ou não está nem na palavra*/
 
-const verificarPalavra = (resposta, chute) => {
+const compararLetra = (resposta, chute) => {
   return chute.split('').map((letra, i) => {
       if (letra === resposta[i]) {
           return { letter: letra, status: 'Posição Certa' };
@@ -93,15 +93,6 @@ const reiniciarJogo = () => {
     document.getElementById("inputPalpite").style.display = 'inline'; // Reexibe o campo de input
     alert("O jogo foi reiniciado! Tente novamente.");
   };
-
-const verificarpalavra = function verificar() { //Função que verifica se a palavra atende ao requisito de possuir exatamente 5 letras e verifica se é igual a palavra selecionada ou se é diferente dela
-    const input = document.getElementById('inputPalpite').value
-
-    if(input.length !== 5) {alert("A palavra deve ter exatamente 5 letras!")}
-        else if(input.toUpperCase() === palavraSelecionada) {alert("Parabéns, você acertou!");  mostrarBotaoReiniciar()}
-            else {alert("Errou, tente novamente!")}
-            //Precisamos Alterar essa função para: Limitar as tentativas em 6, e , ao usuário realizar todas e errar a palavra, o jogo encerrar e aparecer tambem o botão de reiniciar 
-}
 // Função para recarregar a página
 const recarregarPagina = () => {
   location.reload();  
