@@ -17,11 +17,46 @@ let tentativasRestantes = 6;  // Número máximo de tentativas  (Usei Let pois n
 
 /*Função para verificar as letras, dizendo se a letra em questão está certa (letra certa no lugar certo),
 quase certa (letra está contida na palavra, porém posicionada no lugar errado ou não está nem na palavra*/
+
+const verificarPalavra = (resposta, chute) => {
+  return chute.split('').map((letra, i) => {
+      if (letra === resposta[i]) {
+          return { letter: letra, status: 'Posição Certa' };
+      } else if (resposta.includes(letra)) {
+          return { letter: letra, status: 'Está Presente' };
+      } else {
+          return { letter: letra, status: 'Não tem' };
+      }
+  });
+};
+
 /* Dado o valor em correta, quase e errada (nomes que eu defini no css), criar uma função para aplicar 
 tais classes em cada uma das letras, lembrando das nuances de palavras que possuem letras repetidas e coisas desse tipo */
 
 
-//Função Para que as respostas anteriores continuem na tela, para o jogador poder se basear
+//Função Para que as respostas anteriores continuem na tela, para o jogador poder se basear e com cores
+const mostrarResultado = (resultado, palpite) => {
+  const resultadoDiv = document.getElementById('resultadoPalpite');
+  const novaTentativa = document.createElement('div');
+  novaTentativa.classList.add('tentativa');
+
+  resultado.map((item, index) => {
+      const letraSpan = document.createElement('span');
+      letraSpan.textContent = palpite[index];
+
+      if (item.status === 'Posição Certa') {
+          letraSpan.classList.add('correta');
+      } else if (item.status === 'Está Presente') {
+          letraSpan.classList.add('quase');
+      } else {
+          letraSpan.classList.add('errada');
+      }
+
+      novaTentativa.appendChild(letraSpan);
+  });
+
+  resultadoDiv.appendChild(novaTentativa);
+};
 
 // Função para reiniciar o jogo
 const reiniciarJogo = () => {
