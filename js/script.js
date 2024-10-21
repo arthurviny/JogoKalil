@@ -15,6 +15,31 @@ const palavraAleatoria = (lista) => {
 const palavraSelecionada = palavraAleatoria(listadepalavras) // Função que guarda durante o jogo o valor escolhido pela função palavraAleatoria 
 let tentativasRestantes = 6;  // Número máximo de tentativas  (Usei Let pois não tem como alterar o valor de uma constante pelo meu conhecimeto vai ser necessário / Depois eu tento fazer uma função recursiva pra substituir isso aqui)
 
+
+// Função para verificar a palavra e mostrar o resultado no histórico
+const verificarpalavra = () => {
+    const inputPalpite = document.getElementById('inputPalpite').value.toUpperCase();
+
+    if (inputPalpite.length !== 5) {
+        alert("A palavra deve ter exatamente 5 letras!");
+        return;
+    }
+
+    // Verifica a palavra e exibe o resultado no histórico
+    const resultado = verificarPalavra(palavraSelecionada, inputPalpite);
+    mostrarResultado(resultado, inputPalpite);
+
+    tentativasRestantes--;
+    if (inputPalpite === palavraSelecionada) {
+        alert("Parabéns, você acertou!");
+        mostrarBotaoReiniciar();
+    } else if (tentativasRestantes === 0) {
+        alert(`Fim de jogo! A palavra correta era: ${palavraSelecionada}`);
+        mostrarBotaoReiniciar();
+    }
+
+    document.getElementById('inputPalpite').value = ''; // Limpa o campo de input
+};
 /*Função para verificar as letras, dizendo se a letra em questão está certa (letra certa no lugar certo),
 quase certa (letra está contida na palavra, porém posicionada no lugar errado ou não está nem na palavra*/
 
