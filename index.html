@@ -11,12 +11,10 @@
 <body>
     <button id="ensinar" class="tutorial" onclick="window.location.href='regras.html';"><strong>Tutorial</strong></button>
 
-        
     <div class="container">
         <h1>Verbetim</h1> <!--"Título" do Jogo-->
-        
-        <div id="tabuleiro"></div> 
-        <input type="text" id="inputPalpite" maxlength="5" placeholder="Digite uma palavra" />
+    
+        <input type="text" name="inputPalpite" id="inputPalpite" pattern="[A-Za-z]" maxlength="5" placeholder="Digite uma palavra" required>
         <button id= "enviarPalpite" onclick="verificarpalavra()">ENVIAR</button> <!--Cria o Botão de Enviar Resposta-->
 
         <!-- Div para exibir o resultado dos palpites -->
@@ -24,7 +22,7 @@
        
         <!-- Botão para reiniciar o jogo, que será inicialmente oculto -->
         <button id="botaoReiniciar" onclick ="reiniciarJogo()" style="display: none;">Reiniciar Jogo</button>
-         </div>
+    </div>
 </body>
 </html> 
 

@@ -25,15 +25,6 @@
     box-shadow: 0 0 10px whitesmoke /*Brilho das Bordas*/
     }
 
-    
-    div#tabuleiro { /* essa # serve para identificar a div por meio de seu ID (definido pelo usuário) */
-            display: grid;
-            grid-template-columns: repeat(5, 50px); /*Define o Número total de colunas e o tamanho */
-            grid-gap: 10px;
-            justify-content: center; 
-            margin-bottom:25px;
-    }
-
     input { /* Altera a Caixa de digitação de respostas  */  
         padding: 10px; /* Mexe no tamanho da caixa */
         font-size: 18px; /*Tamanho da Letra Dentro da Caixinha */
