@@ -48,20 +48,21 @@
     }
 
     .correta { /* A Letra está posicionada Corretamente */
-        background-color:  green;
-        color: white;
+        color:green;
+        font-size: 23px;
+
         
     }
 
     .quase { /* A letra está na palavra, porém no posicionamento errado */
-        background-color:yellow;
-        color:white;
+        color:yellow;
+        font-size: 23px;
 
        
     }
     .errada { /* Como irão aparecer as letras que não estão em nenhum lugar da palavra em questão */
-        background-color: red;
-        color: white;
+        color: red;
+        font-size: 23px;
         
     }
 
