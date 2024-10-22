@@ -14,7 +14,9 @@ mas estão em lugares diferentes. O desafio é usar essas pistas para ajustar os
 - Ithalo Vinícius dos Santos
 - Davi Oliveira Machado
 
-Jogue em Qualquer Lugar : https://verbetim.netlify.app/
+## Links
+- Jogue em Qualquer Lugar : https://verbetim.netlify.app/
+- Vídeo Explicativo : https://youtu.be/FhQOK-eVcug
 
 ## Linguagens Usadas
 ![icons8-javascript-48](https://github.com/user-attachments/assets/c90d334e-7784-417f-9595-2f1947c6a326)
