@@ -13,7 +13,6 @@ const palavraAleatoria = (lista) => {
   };
 
 const palavraSelecionada = palavraAleatoria(listadepalavras) // Função que guarda durante o jogo o valor escolhido pela função palavraAleatoria 
-let tentativasRestantes = 6;  // Número máximo de tentativas  (Usei Let pois não tem como alterar o valor de uma constante pelo meu conhecimeto vai ser necessário / Depois eu tento fazer uma função recursiva pra substituir isso aqui)
 
 
 // Função para verificar a palavra e mostrar o resultado no histórico
@@ -29,12 +28,8 @@ const verificarpalavra = () => {
     const resultado = compararLetra(palavraSelecionada, inputPalpite);
     mostrarResultado(resultado, inputPalpite);
 
-    tentativasRestantes--;
     if (inputPalpite === palavraSelecionada) {
         alert("Parabéns, você acertou!");
-        mostrarBotaoReiniciar();
-    } else if (tentativasRestantes === 0) {
-        alert(`Fim de jogo! A palavra correta era: ${palavraSelecionada}`);
         mostrarBotaoReiniciar();
     }
 
@@ -85,7 +80,6 @@ const mostrarResultado = (resultado, palpite) => {
 
 // Função para reiniciar o jogo
 const reiniciarJogo = () => {
-    tentativasRestantes = 6
     palavraSelecionada // Escolhe uma nova palavra secreta
     document.getElementById("resultadoPalpite").innerHTML = ''; // Limpa os palpites anteriores
     document.getElementById("botaoReiniciar").style.display = 'none'; // Oculta o botão de reiniciar
