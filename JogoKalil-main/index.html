@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbetim </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
+    
+    
+  <!--<img src="dimitri.png" alt="dimitri " width="300" height="300" class="canto-superior-esquerdo">-->  
+   <!--<img src="lawd.webp" alt="lawd " width="300" height="300" class="canto-inferior-esquerdo">--> 
+</head>
+<body>
+    <button id="ensinar" class="canto-inferior-esquerdo" onclick="window.location.href='regras.html';"><strong>Tutorial</strong></button>
+    
+    <div class="container">
+        
+        <h1>V e r b e t i m</h1> <!--"Título" do Jogo-->
+        <input type="text" name="inputPalpite" id="inputPalpite" pattern="[A-Za-z]" maxlength="5" placeholder="Digite uma palavra" required>
+        <button id= "enviarPalpite" onclick="verificarpalavra()" onkeypress="verificarpalavra()">ENVIAR</button> <!--Cria o Botão de Enviar Resposta-->
+<br> <br>
+        <!-- Div para exibir o resultado dos palpites -->
+        <div id="resultadoPalpite"></div>
+        
+        <!-- Botão para reiniciar o jogo, que será inicialmente oculto -->
+        <button id="botaoReiniciar" onclick ="reiniciarJogo()" style="display: none;">Reiniciar Jogo</button>
+    </div>
+</body>
+</html> 
+

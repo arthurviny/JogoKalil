@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regras do Verbetim</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(170, 152, 233);
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .content {
+            max-width: 600px;
+        }
+        h1 {
+            margin-bottom: 10px;
+            font-size: 3em;
+        }
+        p, ol, li {
+            font-size: 1.2em;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .rules {
+            font-family:Georgia, 'Times New Roman', Times, serif
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Regras:</h1>
+        <div class="rules">
+            <p>Aqui estão as regras do jogo</p>
+            <ol>
+                <li>São permitidas palavras com exatamente 5 letras.</li>
+                <li>Existirão 3 padrões:</li>
+                <li><font color ="green">Verde</font>: Letra certa no lugar certo</li>
+                <li><font color = "yellow">Amarelo</font>: Letra certa no lugar errado</li>
+                <li><font color ="red">Vermelho</font>: Letra errada</li>
+                <li>O objetivo é descobrir a palavra no menor número de tentativas</li>
+            </ol>
+        </div>
+        <button onclick="window.location.href='index.html';">Ir para o jogo</button>
+    </div>
+</body>
+</html>
