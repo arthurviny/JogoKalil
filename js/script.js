@@ -30,6 +30,17 @@ const podeDigitar = (palavra) => {
     return listadepalavras.includes(palavraNormalizada) //Verifica se a palavra está na lista
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('inputPalpite');
+
+    input.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // evita o comportamento padrão de form
+            verificarpalavra();
+        }
+    });
+});
+
 // Função para verificar a palavra e mostrar o resultado no histórico
 const verificarpalavra = () => {
     const inputPalpite = document.getElementById('inputPalpite').value.toUpperCase();
@@ -51,6 +62,8 @@ const verificarpalavra = () => {
 
     document.getElementById('inputPalpite').value = ''; // Limpa o campo de input
 };
+
+
 /*Função para verificar as letras, dizendo se a letra em questão está certa (letra certa no lugar certo),
 quase certa (letra está contida na palavra, porém posicionada no lugar errado ou não está nem na palavra*/
 
@@ -70,7 +83,8 @@ const compararLetra = (resposta, chute) => {
 tais classes em cada uma das letras, lembrando das nuances de palavras que possuem letras repetidas e coisas desse tipo */
 
 
-//Função Para que as respostas anteriores continuem na tela, para o jogador poder se basear e com cores
+//Função Para que as respostas anteriores continuem na tela, para o jogador poder se basear e com cores []  
+
 const mostrarResultado = (resultado, palpite) => {
   const resultadoDiv = document.getElementById('resultadoPalpite');
   const novaTentativa = document.createElement('div');
@@ -92,15 +106,16 @@ const mostrarResultado = (resultado, palpite) => {
   });
 
   resultadoDiv.appendChild(novaTentativa);
+  
 };
 
 // Função para reiniciar o jogo
 const reiniciarJogo = () => {
     palavraSelecionada // Escolhe uma nova palavra secreta
-    document.getElementById("resultadoPalpite").innerHTML = ''; // Limpa os palpites anteriores
-    document.getElementById("botaoReiniciar").style.display = 'none'; // Oculta o botão de reiniciar
-    document.getElementById("enviarPalpite").style.display = 'inline'; // Reexibe o botão de enviar palpite
-    document.getElementById("inputPalpite").style.display = 'inline'; // Reexibe o campo de input
+    document.getElementById("resultadoPalpite").innerHTML = '' // Limpa os palpites anteriores
+    document.getElementById("botaoReiniciar").style.display = 'none' // Oculta o botão de reiniciar
+    document.getElementById("enviarPalpite").style.display = 'inline' // Reexibe o botão de enviar palpite
+    document.getElementById("inputPalpite").style.display = 'inline' // Reexibe o campo de input
     alert("O jogo foi reiniciado! Tente novamente.");
   };
 // Função para recarregar a página
@@ -109,10 +124,11 @@ const recarregarPagina = () => {
 }
 
 const mostrarBotaoReiniciar = () => {
-    document.getElementById("botaoReiniciar").style.display = 'inline'; // Exibe o botão de reiniciar
-    document.getElementById("enviarPalpite").style.display = 'none';  // Oculta o botão de enviar palpite
-    document.getElementById("inputPalpite").style.display = 'none';   // Oculta o campo de input
-    document.getElementById("ensinar").style.display = 'none'; // Some com o botão de Tutorial 
-    const botaoReiniciar = document.getElementById("botaoReiniciar");
+    document.getElementById("botaoReiniciar").style.display = 'inline' // Exibe o botão de reiniciar
+    document.getElementById("enviarPalpite").style.display = 'none'  // Oculta o botão de enviar palpite
+    document.getElementById("inputPalpite").style.display = 'none'   // Oculta o campo de input
+    document.getElementById("ensinar").style.display = 'none' // Some com o botão de Tutorial 
+    const botaoReiniciar = document.getElementById("botaoReiniciar")
     botaoReiniciar.addEventListener('click', recarregarPagina)  
 }    
+

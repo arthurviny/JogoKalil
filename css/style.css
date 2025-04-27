@@ -1,15 +1,27 @@
+@font-face {
+  font-family: bangers-regular;
+  src: url("./Bangers-Regular.ttf");
+}
+
+@font-face {
+  font-family: comic-regular;
+  src: url("./ComicRelief-Regular.ttf");
+}
+
+
 
     h1 { /* Configurações do "Nome do Jogo */
-    font-size: 45px;
+    text-align: center;
+    font-size: 60px;
     font-weight: 10px;
-    font-family: 'Times New Roman', Times, serif;
-    color:black
+    font-family: bangers-regular;
+    color: rgb(10, 9, 9);
 
     
 }           
 
     body { /* "Corpo" da Página de Forma geral */
-     background-color: rgb(21, 6, 48);  /* Cor de Fundo da Página*/
+     background-color: rgb(26, 6, 66);  /* Cor de Fundo da Página*/
      font-family: Arial, sans-serif; 
     display: flex;
     justify-content: center;
@@ -18,10 +30,11 @@
     }
 
     .container { /* essa caixnha ai do meio onde a mágica acontece */
-    text-align: center; /* Onde vai ficar placeholder*/
-    background-color: rgb(170, 152, 233);
-    padding: 120px; /*Tamanho da "Caixa" */
-    border-radius: 20px; /* Arredondamento das Bordas */
+    margin-top: 100px;
+    text-align: center;
+    background-color: rgb(179, 168, 218);
+    padding: 150px; /*Tamanho da "Caixa" */
+    border-radius:30px; /* Arredondamento das Bordas */
     box-shadow: 0 0 10px whitesmoke /*Brilho das Bordas*/
     }
 
@@ -39,22 +52,40 @@
     }
 
     .correta { /* A Letra está posicionada Corretamente */
-        color:green;
-        font-size: 23px;
-
+      text-align: center;
+      display:inline-block;
+      padding: 8px;
+      background-color: green;
+      color:rgb(233, 244, 233);
+      font-size: 22px;
+      border-radius:4px; /* Arredondamento das Bordas */
+      margin: 0 3px;
+      border: 2px solid black;
         
     }
 
     .quase { /* A letra está na palavra, porém no posicionamento errado */
-        color:yellow;
-        font-size: 23px;
-
+    text-align: center;
+    padding: 8px;
+    display:inline-block;
+    background-color: rgb(187, 187, 23);
+     color:rgb(233, 244, 233); 
+     font-size: 22px;
+     border-radius:4px; /* Arredondamento das Bordas */
+     margin: 0 3px;
+     border: 2px solid black;
        
     }
     .errada { /* Como irão aparecer as letras que não estão em nenhum lugar da palavra em questão */
-        color: red;
-        font-size: 23px;
-        
+     padding: 8px;
+    background-color: red;
+    display:inline-block;
+     color:rgb(233, 244, 233);
+     font-size: 22px;
+     border-radius:4px; /* Arredondamento das Bordas */
+     text-align: center;
+     margin: 0 3px;
+     border: 2px solid black;
     }
 
     /* Estilo para o botão de reiniciar */
@@ -63,7 +94,7 @@
     font-size: 18px;
     padding: 10px 20px;
     margin-top: 20px;
-    background-color: #f44336;
+    background-color: #d32f2f;
     color: white;
     border: none;
     border-radius: 5px;
@@ -74,18 +105,47 @@
     background-color: #d32f2f;
   }
   
-.tutorial {
-    align-self: flex-end;
-    margin-bottom: -15px;
-    padding: 18px;
-    font-size: 18px;
-    cursor: pointer;
+.canto-superior-direito {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+  }
+
+  
+  .canto-inferior-esquerdo {
+    position: fixed;
+    top: 650px;
+    left: 17px;
+    width: 200px;
+        align-self: flex-end;
+        margin-bottom: -15px;
+        padding: 18px;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: right;
+        justify-content: center;
+        font-family: 'Audiowide', 'sans-serif';
+        text-align: center;
+        background-color: rgb(218, 203, 218); 
+        color: black;
+        border-radius: 5px
+        ;
+    
+  }
+
+  .canto-superior-esquerdo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+  }
+
+  #resultadoPalpite {
     display: flex;
-    align-items: right;
-    justify-content: center;
-    font-family: 'Audiowide', 'sans-serif';
-    text-align: center;
-    background-color: rgb(52, 6, 66); 
-    color: #b5b5c0;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px;               
 }
-   
+
